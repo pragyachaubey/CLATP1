@@ -1,0 +1,46 @@
+
+/* Calculator program */
+
+#include <stdio.h>
+
+int main() {
+
+  int c, con, i=1;
+  double first, second;
+  printf("Welcome to calculator app!\n");
+  printf("enter number of operations to be performed: \n");
+  scanf("%d", &con);
+  while (i<=con)
+  {
+      printf("Your options for operations are: \n1 - addition\n2 - subtraction\n3 - multiplication\n4 - division\n");
+      printf("Enter your choice: ");
+      scanf("%d", &c);
+      printf("Enter two operands: ");
+      scanf("%lf %lf", &first, &second);
+      switch (c) 
+      {
+          case 1:  //addition
+            printf("your output: \n");
+            printf("%.1lf + %.1lf = %.1lf\n", first, second, first + second);
+            break;
+          case 2:  //subtraction
+            printf("your output: \n");
+            printf("%.1lf - %.1lf = %.1lf\n", first, second, first - second);
+            break;
+          case 3:  //multiplication
+            printf("your output: \n");
+            printf("%.1lf * %.1lf = %.1lf\n", first, second, first * second);
+            break;
+          case 4:  //division
+            printf("your output: \n");
+            printf("%.1lf / %.1lf = %.1lf\n", first, second, first / second);
+            break;
+          default:  // operator doesn't match any case
+            printf("Error! option does not match choices\n");
+          
+      }
+      i++;
+  }
+  printf("Thank you!");
+  return 0;
+}
